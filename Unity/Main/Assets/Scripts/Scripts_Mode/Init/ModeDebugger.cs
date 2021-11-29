@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
+using Cysharp.Threading.Tasks;
 
 namespace Mode
 {
@@ -21,14 +22,9 @@ namespace Mode
         Quality,
         Environment
     }
-    [DisallowMultipleComponent]
-    public class DebuggerComponent : MonoBehaviour
-    {
-        /// <summary>
-        /// 是否允许调试
-        /// </summary>
-        public bool AllowDebugging = true;
 
+    public class ModeDebugger : MonoSingleton<ModeDebugger>
+    {
         private DebugType _debugType = DebugType.Console;
         private readonly List<LogData> _logInformations = new List<LogData>();
         private int _currentLogIndex = -1;
@@ -51,35 +47,32 @@ namespace Mode
         private int _frameNumber;
         private float _lastShowFPSTime;
 
-        private void Awake()
+        protected override  UniTask OnInit()
         {
-            DontDestroyOnLoad(gameObject);
-            if (AllowDebugging)
-            {
-                Application.logMessageReceived += LogHandler;
-            }
+            Application.logMessageReceived += LogHandler;
+            return UniTask.CompletedTask;
         }
+
 
         private void Update()
         {
-            if (!this.AllowDebugging) return;
-
             this._frameNumber += 1;
 
             float time = Time.realtimeSinceStartup - this._lastShowFPSTime;
 
             if (!(time >= 1)) return;
 
-            this._fps = (int)(this._frameNumber / time);
+            this._fps = (int) (this._frameNumber / time);
             this._frameNumber = 0;
             this._lastShowFPSTime = Time.realtimeSinceStartup;
         }
 
-        public void OnDestory()
-        {
-            if (!AllowDebugging) return;
 
+        protected override void Destroy()
+        {
             Application.logMessageReceived -= LogHandler;
+
+            base.Destroy();
         }
 
         private void LogHandler(string condition, string stacktrace, UnityEngine.LogType type)
@@ -125,10 +118,9 @@ namespace Mode
 
         private void OnGUI()
         {
-            if (!AllowDebugging) return;
-
-            this._windowRect = this._expansion ? GUI.Window(0, this._windowRect, this.ExpansionGUIWindow, "DEBUGGER")
-                    : GUI.Window(0, this._windowRect, this.ShrinkGUIWindow, "DEBUGGER");
+            this._windowRect = this._expansion
+                ? GUI.Window(0, this._windowRect, this.ExpansionGUIWindow, "DEBUGGER")
+                : GUI.Window(0, this._windowRect, this.ShrinkGUIWindow, "DEBUGGER");
         }
 
         private void ExpansionGUIWindow(int windowId)

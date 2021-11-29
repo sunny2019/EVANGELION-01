@@ -10,9 +10,9 @@
         private static string crossBindingAdaptorRegisterFileName = "InitializeILRuntime.CrossbindAdapterGenerate.cs";
         private static string crossBindingAdaptorNameSpace = "ILRuntime.Moudle.CrossbindAdapter";
 
-        public static string HotFixDllName = "HotFix";
-        public static string dllBytesPath = $"Assets/Scripts/HotFixDLL/{HotFixDllName}.bytes";
-        public static string pdbBytesPath = $"Assets/Scripts/HotFixDLL/{HotFixDllName}.pdb";
+        public static string HotFixDLLName = "HotFix";
+        public static string dllBytesPath = $"Assets/Scripts/HotFixDLL/{HotFixDLLName}.bytes";
+        public static string pdbBytesPath = $"Assets/Scripts/HotFixDLL/{HotFixDLLName}.pdb";
 #endif
     }
 }
