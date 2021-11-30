@@ -11,8 +11,8 @@
         private static string crossBindingAdaptorNameSpace = "ILRuntime.Moudle.CrossbindAdapter";
 
         public static string HotFixDLLName = "HotFix";
-        public static string dllBytesPath = $"Assets/Scripts/HotFixDLL/{HotFixDLLName}.bytes";
-        public static string pdbBytesPath = $"Assets/Scripts/HotFixDLL/{HotFixDLLName}.pdb";
+        public static string dllBytesPath = $"Assets/Scripts/HotFixDLL/{HotFixDLLName}Dll.bytes";
+        public static string pdbBytesPath = $"Assets/Scripts/HotFixDLL/{HotFixDLLName}Pdb.bytes";
 #endif
     }
 }

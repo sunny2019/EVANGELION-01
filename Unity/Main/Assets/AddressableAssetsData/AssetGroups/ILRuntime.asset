@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: ILRuntime
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: ILRuntime
   m_Data:
     m_SerializedData: []
   m_GUID: ad53eb1def29a1d4490c421af5abf334
   m_SerializeEntries:
-  - m_GUID: b0e101cc3ad250e4d9657a47566f80e7
-    m_Address: HotFix.byte
+  - m_GUID: b4c4101ff4ba16b499a24be519c209ec
+    m_Address: HotFixPdb
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 72b1ecf11b87e0640820c2e373401b93
+    m_Address: HotFixDll
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

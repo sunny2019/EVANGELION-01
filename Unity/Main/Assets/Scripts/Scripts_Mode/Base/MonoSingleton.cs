@@ -1,10 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
-using UnityEngine;
-
-namespace Mode
+﻿namespace Mode
 {
+    using System;
+    using System.Threading.Tasks;
+    using Cysharp.Threading.Tasks;
+    using UnityEngine;
+
     public class MonoSingleton<T> : MonoBehaviour where T : Component
     {
         // 单件子类实例
@@ -14,7 +14,6 @@ namespace Mode
         {
             get
             {
-                
                 if (_instance == null)
                 {
                     Debug.LogError("MonoSingleton:" + typeof(T).Name + "未进行初始化。");
@@ -23,13 +22,7 @@ namespace Mode
                 return _instance;
             }
         }
-
-        /// <summary>
-        ///     获得单件实例，查询场景中是否有该种类型，如果有存储静态变量，如果没有，构建一个带有这个component的gameobject
-        ///     这种单件实例的GameObject直接挂接在bootroot节点下，在场景中的生命周期和游戏生命周期相同，创建这个单件实例的模块
-        ///     必须通过DestroyInstance自行管理单件的生命周期
-        /// </summary>
-        /// <returns>返回单件实例</returns>
+        
         public async static Task<T> Init()
         {
             if (_instance == null)

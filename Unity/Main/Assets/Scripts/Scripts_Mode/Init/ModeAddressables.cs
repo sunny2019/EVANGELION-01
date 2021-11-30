@@ -1,13 +1,13 @@
-using System;
-using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
-using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.AddressableAssets.ResourceLocators;
-using UnityEngine.ResourceManagement.AsyncOperations;
-
 namespace Mode
 {
+    using System;
+    using System.Collections.Generic;
+    using Cysharp.Threading.Tasks;
+    using UnityEngine;
+    using UnityEngine.AddressableAssets;
+    using UnityEngine.AddressableAssets.ResourceLocators;
+    using UnityEngine.ResourceManagement.AsyncOperations;
+
     public static class ModeAddressables
     {
         /// <summary>
@@ -81,7 +81,7 @@ namespace Mode
         /// </summary>
         /// <param name="keys"></param>
         /// <returns></returns>
-        public async static UniTask<long> GetDownloadSize(IEnumerable<object> keys)
+        private async static UniTask<long> GetDownloadSize(IEnumerable<object> keys)
         {
             var downloadSize = Addressables.GetDownloadSizeAsync(keys);
             await downloadSize.Task;
@@ -93,7 +93,7 @@ namespace Mode
         /// </summary>
         /// <param name="keys"></param>
         /// <param name="downloadedSize"></param>
-        public async static UniTask Download(IEnumerable<object> keys, Action<long> downloadedSize = null)
+        private async static UniTask Download(IEnumerable<object> keys, Action<long> downloadedSize = null)
         {
             foreach (var key in keys)
             {
@@ -107,7 +107,5 @@ namespace Mode
                 }
             }
         }
-
-     
     }
 }

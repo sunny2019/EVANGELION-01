@@ -7,7 +7,7 @@ namespace Mode
     {
         private async void Awake()
         {
-#if DEBUG && (UNITY_EDITOR || UNITY_ANDROID || UNITY_IPHONE)
+#if DEBUG
             await ModeDebugger.Init();
 #endif
             await ModeAddressables.HotUpdate();

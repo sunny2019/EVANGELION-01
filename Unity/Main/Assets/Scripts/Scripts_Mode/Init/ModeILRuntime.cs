@@ -1,26 +1,30 @@
-using System.IO;
-using Cysharp.Threading.Tasks;
-using UnityEngine;
-using UnityEngine.AddressableAssets;
-using AppDomain = ILRuntime.Runtime.Enviorment.AppDomain;
-
 namespace Mode
 {
+    using System.IO;
+    using Cysharp.Threading.Tasks;
+    using UnityEngine;
+    using UnityEngine.AddressableAssets;
+
     public class ModeILRuntime : MonoSingleton<ModeILRuntime>
     {
-        public static AppDomain Appdomain;
+        public static ILRuntime.Runtime.Enviorment.AppDomain Appdomain;
         private static MemoryStream dllMs;
         private static MemoryStream pdbMs;
 
+        private async UniTask<byte[]> LoadILRuntimeFile(string aaKey)
+        {
+            var hotfix = Addressables.LoadAssetAsync<TextAsset>(aaKey);
+            await hotfix.Task;
+            byte[] bytes = hotfix.Result.bytes;
+            Addressables.Release(hotfix);
+            return bytes;
+        }
+
         protected override async UniTask OnInit()
         {
-            var hotfixDll = Addressables.LoadAssetAsync<TextAsset>("HotFix.bytes");
-            await hotfixDll.Task;
-            byte[] dllBytes = hotfixDll.Result.bytes;
-            Addressables.Release(hotfixDll);
-            dllMs = new MemoryStream(dllBytes);
-#if UNITY_EDITOR
-            pdbMs = new MemoryStream(File.ReadAllBytes(Directory.GetParent(Application.dataPath) + "/" + ILRuntime.Moudle.InitializeILRuntime.pdbBytesPath));
+            dllMs = new MemoryStream(await LoadILRuntimeFile("HotFixDll"));
+#if DEBUG
+            pdbMs = new MemoryStream(await LoadILRuntimeFile("HotFixPdb"));
 #endif
             Appdomain = new ILRuntime.Runtime.Enviorment.AppDomain();
             try
@@ -47,7 +51,7 @@ namespace Mode
 
             base.Destroy();
         }
-        
+
         private static void OnHotFixLoaded()
         {
             Appdomain.Invoke("HotFix.Init", "HotFixInit", null, null);

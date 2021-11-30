@@ -1,10 +1,10 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
-using System;
-using Cysharp.Threading.Tasks;
-
-namespace Mode
+﻿namespace Mode
 {
+    using UnityEngine;
+    using System.Collections.Generic;
+    using System;
+    using Cysharp.Threading.Tasks;
+
     public struct LogData
     {
         public string time;
@@ -47,7 +47,7 @@ namespace Mode
         private int _frameNumber;
         private float _lastShowFPSTime;
 
-        protected override  UniTask OnInit()
+        protected override UniTask OnInit()
         {
             Application.logMessageReceived += LogHandler;
             return UniTask.CompletedTask;
