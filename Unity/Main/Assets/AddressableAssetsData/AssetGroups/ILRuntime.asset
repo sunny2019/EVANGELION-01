@@ -25,6 +25,18 @@ MonoBehaviour:
     m_Address: HotFixDll
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 19ba41d7c0026c3459d37c2fe90c55a0
+    m_Address: UniversalRP-HighQuality
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a31e9f9f9c9d4b9429ed0d1234e22103
+    m_Address: UniversalRP-LowQuality
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d847b876476d3d6468f5dfcd34266f96
+    m_Address: UniversalRP-MediumQuality
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7b6a435bf42309a4c9c1156b8e9b4a03, type: 2}
   m_SchemaSet:
