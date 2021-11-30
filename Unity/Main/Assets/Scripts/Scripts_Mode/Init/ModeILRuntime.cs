@@ -33,7 +33,7 @@ namespace Mode
             }
             catch
             {
-                Debug.LogError("加载热更DLL失败，请确保已经通过编译过热更DLL");
+                Debug.LogError("Failed to load assembly, Please make sure you have compiled and copied the HotFix DLL");
             }
 
             ILRuntime.Moudle.InitializeILRuntime.InitializeCustom(Appdomain);

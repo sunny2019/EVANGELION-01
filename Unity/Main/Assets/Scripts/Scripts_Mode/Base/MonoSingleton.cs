@@ -16,7 +16,7 @@
             {
                 if (_instance == null)
                 {
-                    Debug.LogError("MonoSingleton:" + typeof(T).Name + "未进行初始化。");
+                    Debug.LogError("MonoSingleton: [" + typeof(T).Name + "] not initialized。");
                 }
 
                 return _instance;
@@ -38,11 +38,11 @@
                     _instance = go.AddComponent<T>();
 
                     //挂接到BootObj下
-                    GameObject bootObj = GameObject.Find("EVANGELION-01");
+                    GameObject bootObj = GameObject.Find("[EVANGELION-01]");
 
                     if (bootObj == null)
                     {
-                        bootObj = new GameObject("EVANGELION-01");
+                        bootObj = new GameObject("[EVANGELION-01]");
                         DontDestroyOnLoad(bootObj);
                     }
 
@@ -52,12 +52,12 @@
                 }
                 else
                 {
-                    Debug.LogError("MonoSingleton:" + typeof(T).Name + "已在当前场景中存在。");
+                    Debug.LogError("MonoSingleton: [" + typeof(T).Name + "] already exists in the current scene .");
                 }
             }
             else
             {
-                Debug.LogError("MonoSingleton:" + typeof(T).Name + "已完成初始化。");
+                Debug.LogError("MonoSingleton: [" + typeof(T).Name + "] initialized。");
             }
 
 
