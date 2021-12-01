@@ -8,7 +8,7 @@
 
     public static class UnityEngine_Debug_CLRRedirection
     {
-        public unsafe static void RegisterILRuntimeCLRRedirection(ILRuntime.Runtime.Enviorment.AppDomain appDomain)
+        public unsafe static void RegisterILRuntimeCLRRedirection(ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
             foreach (var i in typeof(UnityEngine.Debug).GetMethods())
             {
@@ -17,7 +17,7 @@
                     var param = i.GetParameters();
                     if (param[0].ParameterType == typeof(object))
                     {
-                        appDomain.RegisterCLRMethodRedirection(i, Log_0);
+                        appdomain.RegisterCLRMethodRedirection(i, Log_0);
                     }
                 }
             }

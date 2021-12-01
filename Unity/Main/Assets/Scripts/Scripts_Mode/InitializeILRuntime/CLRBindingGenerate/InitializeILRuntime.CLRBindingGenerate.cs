@@ -8,9 +8,9 @@ namespace ILRuntime.Moudle
         /// <summary>
         /// 注册CLR绑定(发版前固定)
         /// </summary>
-        private static void InitializeCLRBinding(this ILRuntime.Runtime.Enviorment.AppDomain appDomain)
+        private static void InitializeCLRBinding(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
-            ILRuntime.Runtime.Generated.CLRBindings.Initialize(appDomain);
+            ILRuntime.Runtime.Generated.CLRBindings.Initialize(appdomain);
         }
     }
 }

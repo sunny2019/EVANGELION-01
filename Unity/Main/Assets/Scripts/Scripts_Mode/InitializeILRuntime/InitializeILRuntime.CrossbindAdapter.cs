@@ -27,6 +27,7 @@ namespace ILRuntime.Moudle
         {
             typeof(ILRuntime.Moudle.CrossBindingAdaptorCustom.MonoBehaviourAdapter),
             typeof(ILRuntime.Moudle.CrossBindingAdaptorCustom.CoroutineAdapter),
+            typeof(ILRuntime.Moudle.CrossBindingAdaptorCustom.ProtoIMessageAdapt),
         };
     }
 }

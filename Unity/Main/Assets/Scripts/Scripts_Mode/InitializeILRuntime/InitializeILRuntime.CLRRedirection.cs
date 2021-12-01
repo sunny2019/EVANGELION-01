@@ -12,11 +12,11 @@
         /// 注册CLR重定向(发版前固定)
         /// </summary>
         /// <param name="appDomain"></param>
-        private static void InitializeCLRRedirection(this ILRuntime.Runtime.Enviorment.AppDomain appDomain)
+        private static void InitializeCLRRedirection(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
-            UnityEngine_Debug_CLRRedirection.RegisterILRuntimeCLRRedirection(appDomain);
-            UnityEngine_GameObject_CLRRedirection.RegisterILRuntimeCLRRedirection(appDomain);
-            LitJson.JsonMapper.RegisterILRuntimeCLRRedirection(appDomain);
+            UnityEngine_Debug_CLRRedirection.RegisterILRuntimeCLRRedirection(appdomain);
+            UnityEngine_GameObject_CLRRedirection.RegisterILRuntimeCLRRedirection(appdomain);
+            LitJson.JsonMapper.RegisterILRuntimeCLRRedirection(appdomain);
         }
 
 
@@ -24,11 +24,11 @@
         /// 注册CLR重定向(发版前固定)
         /// </summary>
         /// <param name="appDomain"></param>
-        private static void InitializeValueTypeBinder(this ILRuntime.Runtime.Enviorment.AppDomain appDomain)
+        private static void InitializeValueTypeBinder(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
-            appDomain.RegisterValueTypeBinder(typeof(Vector3), new Vector3Binder());
-            appDomain.RegisterValueTypeBinder(typeof(Quaternion), new QuaternionBinder());
-            appDomain.RegisterValueTypeBinder(typeof(Vector2), new Vector2Binder());
+            appdomain.RegisterValueTypeBinder(typeof(Vector3), new Vector3Binder());
+            appdomain.RegisterValueTypeBinder(typeof(Quaternion), new QuaternionBinder());
+            appdomain.RegisterValueTypeBinder(typeof(Vector2), new Vector2Binder());
         }
     }
 }

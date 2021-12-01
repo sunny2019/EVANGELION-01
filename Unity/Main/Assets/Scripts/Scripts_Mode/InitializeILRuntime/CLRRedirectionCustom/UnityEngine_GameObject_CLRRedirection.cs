@@ -10,7 +10,7 @@
 
     public static class UnityEngine_GameObject_CLRRedirection
     {
-        public unsafe static void RegisterILRuntimeCLRRedirection(ILRuntime.Runtime.Enviorment.AppDomain appDomain)
+        public unsafe static void RegisterILRuntimeCLRRedirection(ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
             // foreach (var i in typeof(UnityEngine.Debug).GetMethods())
             // {
@@ -30,7 +30,7 @@
             {
                 if (i.Name == "AddComponent" && i.GetGenericArguments().Length == 1)
                 {
-                    appDomain.RegisterCLRMethodRedirection(i, AddComponent);
+                    appdomain.RegisterCLRMethodRedirection(i, AddComponent);
                 }
             }
 
@@ -39,7 +39,7 @@
             {
                 if (i.Name == "GetComponent" && i.GetGenericArguments().Length == 1)
                 {
-                    appDomain.RegisterCLRMethodRedirection(i, GetComponent);
+                    appdomain.RegisterCLRMethodRedirection(i, GetComponent);
                 }
             }
         }

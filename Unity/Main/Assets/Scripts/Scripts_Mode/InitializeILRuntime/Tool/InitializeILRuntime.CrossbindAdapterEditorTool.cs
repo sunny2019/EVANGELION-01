@@ -62,22 +62,22 @@ namespace ILRuntime.Moudle
         /// <summary>
         /// 注册跨域继承适配器(发版前固定)
         /// </summary>
-        private static void InitializeCrossbindAdapter(this ILRuntime.Runtime.Enviorment.AppDomain appDomain)
+        private static void InitializeCrossbindAdapter(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {");
             for (int i = 0; i < list_GenerateCrossbindAdapterTypes.Count; i++)
             {
-                sb.AppendLine($@"            appDomain.RegisterCrossBindingAdaptor(new {list_GenerateCrossbindAdapterTypes[i].Name}Adapter());");
+                sb.AppendLine($@"            appdomain.RegisterCrossBindingAdaptor(new {list_GenerateCrossbindAdapterTypes[i].Name}Adapter());");
             }
 
             sb.AppendLine(@"        }");
             sb.AppendLine(@"        /// <summary>
         /// 注册跨域继承的特殊适配器
         /// </summary>
-        private static void InitializeSpecialCrossbindAdapter(this ILRuntime.Runtime.Enviorment.AppDomain appDomain)
+        private static void InitializeSpecialCrossbindAdapter(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
             for (int i = 0; i < list_SpecialCrossbindAdapterTypes.Count; i++)
             {
-                appDomain.RegisterCrossBindingAdaptor(System.Activator.CreateInstance(list_SpecialCrossbindAdapterTypes[i]) as Runtime.Enviorment.CrossBindingAdaptor);
+                appdomain.RegisterCrossBindingAdaptor(System.Activator.CreateInstance(list_SpecialCrossbindAdapterTypes[i]) as Runtime.Enviorment.CrossBindingAdaptor);
             }
         }
     }

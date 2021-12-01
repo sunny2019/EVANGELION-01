@@ -9,22 +9,23 @@
         /// 注册委托参数及适配器(发版前固定)
         /// </summary>
         /// <param name="appDomain"></param>
-        private static void InitializeDelegate(this ILRuntime.Runtime.Enviorment.AppDomain appDomain)
+        private static void InitializeDelegate(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
-            appDomain.DelegateManager.RegisterMethodDelegate<int>();
-            appDomain.DelegateManager.RegisterMethodDelegate<float>();
-            appDomain.DelegateManager.RegisterMethodDelegate<double>();
-            appDomain.DelegateManager.RegisterMethodDelegate<bool>();
-            appDomain.DelegateManager.RegisterMethodDelegate<string>();
-            appDomain.DelegateManager.RegisterFunctionDelegate<int>();
-            appDomain.DelegateManager.RegisterFunctionDelegate<float>();
-            appDomain.DelegateManager.RegisterFunctionDelegate<double>();
-            appDomain.DelegateManager.RegisterFunctionDelegate<bool>();
-            appDomain.DelegateManager.RegisterFunctionDelegate<string>();
-            appDomain.DelegateManager.RegisterFunctionDelegate<int, string>();
-
+            appdomain.DelegateManager.RegisterMethodDelegate<int>();
+            appdomain.DelegateManager.RegisterMethodDelegate<float>();
+            appdomain.DelegateManager.RegisterMethodDelegate<double>();
+            appdomain.DelegateManager.RegisterMethodDelegate<bool>();
+            appdomain.DelegateManager.RegisterMethodDelegate<string>();
+            appdomain.DelegateManager.RegisterFunctionDelegate<int>();
+            appdomain.DelegateManager.RegisterFunctionDelegate<float>();
+            appdomain.DelegateManager.RegisterFunctionDelegate<double>();
+            appdomain.DelegateManager.RegisterFunctionDelegate<bool>();
+            appdomain.DelegateManager.RegisterFunctionDelegate<string>();
+            appdomain.DelegateManager.RegisterFunctionDelegate<int, string>();
+            appdomain.DelegateManager.RegisterFunctionDelegate<global::ILRuntime.Moudle.CrossBindingAdaptorCustom.ProtoIMessageAdapt.Adaptor>();
+            appdomain.DelegateManager.RegisterFunctionDelegate<int, int>();
             
-            appDomain.DelegateManager.RegisterDelegateConvertor<UnityEngine.Events.UnityAction<float>>((action) =>
+            appdomain.DelegateManager.RegisterDelegateConvertor<UnityEngine.Events.UnityAction<float>>((action) =>
             {
                 return new UnityEngine.Events.UnityAction<float>((value) => { ((System.Action<float>) action)(value); });
             });

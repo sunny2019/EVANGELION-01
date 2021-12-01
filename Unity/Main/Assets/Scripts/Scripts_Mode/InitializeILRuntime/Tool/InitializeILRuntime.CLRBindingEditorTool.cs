@@ -93,10 +93,10 @@ namespace ILRuntime.Moudle
         /// <summary>
         /// 注册CLR绑定(发版前固定)
         /// </summary>
-        private static void InitializeCLRBinding(this ILRuntime.Runtime.Enviorment.AppDomain appDomain)
+        private static void InitializeCLRBinding(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {");
             if (needInitialize)
-                sb.AppendLine(@"            ILRuntime.Runtime.Generated.CLRBindings.Initialize(appDomain);");
+                sb.AppendLine(@"            ILRuntime.Runtime.Generated.CLRBindings.Initialize(appdomain);");
             sb.AppendLine(@"        }
     }
 }");

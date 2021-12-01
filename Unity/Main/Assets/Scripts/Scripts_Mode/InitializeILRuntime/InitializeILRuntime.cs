@@ -4,23 +4,23 @@ namespace ILRuntime.Moudle
 {
     public static partial class InitializeILRuntime
     {
-        public static void InitializeCustom(ILRuntime.Runtime.Enviorment.AppDomain appDomain)
+        public static void InitializeCustom(ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
 #if DEBUG && (UNITY_EDITOR || UNITY_ANDROID || UNITY_IPHONE)
             //由于Unity的Profiler接口只允许在主线程使用，为了避免出异常，需要告诉ILRuntime主线程的线程ID才能正确将函数运行耗时报告给Profiler
-            appDomain.UnityMainThreadID = System.Threading.Thread.CurrentThread.ManagedThreadId;
-            appDomain.DebugService.StartDebugService(56000);
+            appdomain.UnityMainThreadID = System.Threading.Thread.CurrentThread.ManagedThreadId;
+            appdomain.DebugService.StartDebugService(56000);
 #endif
             //委托搭配及跨域委托适配器配置及注册（此方法内容手动填写）
-            appDomain.InitializeDelegate();
+            appdomain.InitializeDelegate();
             //跨域继承适配器注册（此方法内容自动生成）
             //配置在Initialize.CrossbindAdapter.cs中，填写类型并点击标题栏ILRuntimeMoudle/生成跨域继承适配器(发包大版本更新时使用)
-            appDomain.InitializeCrossbindAdapter();
-            appDomain.InitializeSpecialCrossbindAdapter();
+            appdomain.InitializeCrossbindAdapter();
+            appdomain.InitializeSpecialCrossbindAdapter();
             //CLR重定向的配置及注册
-            appDomain.InitializeCLRRedirection();
+            appdomain.InitializeCLRRedirection();
             //值类型绑定重定向注册
-            appDomain.InitializeValueTypeBinder();
+            appdomain.InitializeValueTypeBinder();
             
             
             
@@ -30,7 +30,7 @@ namespace ILRuntime.Moudle
             //请确定此步骤执行前已完成生成跨域继承适配器的配置和生成
             //如因CLR缺少配置导致此处方法丢失，请注释并修改配置重新生成CLRBinding后解注
             
-            appDomain.InitializeCLRBinding();
+            appdomain.InitializeCLRBinding();
             
         }
     }
