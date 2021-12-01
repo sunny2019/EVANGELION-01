@@ -19,7 +19,7 @@
             //         var param = i.GetParameters();
             //         if (param[0].ParameterType == typeof(object))
             //         {
-            //             appDomain.RegisterCLRMethodRedirection(i, Log_0);
+            //             appdomain.RegisterCLRMethodRedirection(i, Log_0);
             //         }
             //     }
             // }

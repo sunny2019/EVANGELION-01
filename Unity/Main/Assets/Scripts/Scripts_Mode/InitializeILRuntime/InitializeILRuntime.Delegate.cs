@@ -8,7 +8,7 @@
         /// <summary>
         /// 注册委托参数及适配器(发版前固定)
         /// </summary>
-        /// <param name="appDomain"></param>
+        /// <param name="appdomain"></param>
         private static void InitializeDelegate(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
             appdomain.DelegateManager.RegisterMethodDelegate<int>();

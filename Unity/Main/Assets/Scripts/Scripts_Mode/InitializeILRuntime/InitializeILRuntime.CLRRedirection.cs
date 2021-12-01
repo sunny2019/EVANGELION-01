@@ -11,7 +11,7 @@
         /// <summary>
         /// 注册CLR重定向(发版前固定)
         /// </summary>
-        /// <param name="appDomain"></param>
+        /// <param name="appdomain"></param>
         private static void InitializeCLRRedirection(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
             UnityEngine_Debug_CLRRedirection.RegisterILRuntimeCLRRedirection(appdomain);
@@ -23,7 +23,7 @@
         /// <summary>
         /// 注册CLR重定向(发版前固定)
         /// </summary>
-        /// <param name="appDomain"></param>
+        /// <param name="appdomain"></param>
         private static void InitializeValueTypeBinder(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
             appdomain.RegisterValueTypeBinder(typeof(Vector3), new Vector3Binder());
