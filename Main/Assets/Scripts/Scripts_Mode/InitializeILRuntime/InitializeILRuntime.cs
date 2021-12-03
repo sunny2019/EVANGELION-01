@@ -14,7 +14,7 @@ namespace ILRuntime.Moudle
             //委托搭配及跨域委托适配器配置及注册（此方法内容手动填写）
             appdomain.InitializeDelegate();
             //跨域继承适配器注册（此方法内容自动生成）
-            //配置在Initialize.CrossbindAdapter.cs中，填写类型并点击标题栏ILRuntimeMoudle/生成跨域继承适配器(发包大版本更新时使用)
+            //配置在Initialize.CrossbindAdapter.cs中，填写类型并点击标题栏Tools/ILRuntime/生成跨域继承适配器(发包大版本更新时使用)
             appdomain.InitializeCrossbindAdapter();
             appdomain.InitializeSpecialCrossbindAdapter();
             //CLR重定向的配置及注册
@@ -23,7 +23,7 @@ namespace ILRuntime.Moudle
             appdomain.InitializeValueTypeBinder();
 
             //CLR绑定初始化
-            //自定义跨域继承适配器在InitializeILRuntime.CLRBinding.cs中，填写类型并点击标题栏ILRuntimeMoudle/通过自动分析热更DLL生成CLR绑定(发包大版本更新时使用)
+            //自定义跨域继承适配器在InitializeILRuntime.CLRBinding.cs中，填写类型并点击标题栏Tools/ILRuntime/通过自动分析热更DLL生成CLR绑定(发包大版本更新时使用)
             //请确定此步骤执行前已完成生成跨域继承适配器的配置和生成
             //如因CLR缺少配置导致此处方法丢失，请注释并修改配置重新生成CLRBinding后解注
             

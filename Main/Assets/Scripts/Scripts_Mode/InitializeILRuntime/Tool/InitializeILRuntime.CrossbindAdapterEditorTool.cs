@@ -10,7 +10,7 @@ namespace ILRuntime.Moudle
     /// </summary>
     public static partial class InitializeILRuntime
     {
-        [UnityEditor.MenuItem("ILRuntimeMoudle/生成跨域继承适配器(发版前固定)")]
+        [UnityEditor.MenuItem("Tools/ILRuntime/生成跨域继承适配器(发版前固定)")]
         private static void InitializeILRuntimeCrossbindAdapter()
         {
             if (Directory.Exists(crossBindingAdaptorPath))

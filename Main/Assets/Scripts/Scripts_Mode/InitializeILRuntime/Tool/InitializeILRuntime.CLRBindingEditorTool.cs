@@ -12,7 +12,7 @@ namespace ILRuntime.Moudle
     /// </summary>
     public static partial class InitializeILRuntime
     {
-        [UnityEditor.MenuItem("ILRuntimeMoudle/通过自动分析热更DLL生成CLR绑定(发版前固定)")]
+        [UnityEditor.MenuItem("Tools/ILRuntime/通过自动分析热更DLL生成CLR绑定(发版前固定)")]
         private static void InitializeILRuntimeCLRBinding()
         {
             if (Directory.Exists(clrBindingPath))
