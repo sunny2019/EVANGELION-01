@@ -21,10 +21,7 @@ namespace ILRuntime.Moudle
             appdomain.InitializeCLRRedirection();
             //值类型绑定重定向注册
             appdomain.InitializeValueTypeBinder();
-            
-            
-            
-            
+
             //CLR绑定初始化
             //自定义跨域继承适配器在InitializeILRuntime.CLRBinding.cs中，填写类型并点击标题栏ILRuntimeMoudle/通过自动分析热更DLL生成CLR绑定(发包大版本更新时使用)
             //请确定此步骤执行前已完成生成跨域继承适配器的配置和生成
