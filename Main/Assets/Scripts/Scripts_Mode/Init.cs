@@ -13,7 +13,7 @@ namespace Mode
             PlayingDownload,
         }
 
-        public AAMode mAAMode = AAMode.PreDownload;
+        [SerializeField] private AAMode mAAMode = AAMode.PreDownload;
 
         private async void Awake()
         {
