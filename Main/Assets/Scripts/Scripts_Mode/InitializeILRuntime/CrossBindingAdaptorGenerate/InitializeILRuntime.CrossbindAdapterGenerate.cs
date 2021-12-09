@@ -1,5 +1,7 @@
 namespace ILRuntime.Moudle
 {
+    using ILRuntime.Moudle.CrossbindAdapter;
+
     /// <summary>
     /// 负责跨域继承适配器的注册(自动生成文件，请勿手动更改)
     /// </summary>
@@ -10,6 +12,7 @@ namespace ILRuntime.Moudle
         /// </summary>
         private static void InitializeCrossbindAdapter(this ILRuntime.Runtime.Enviorment.AppDomain appdomain)
         {
+            appdomain.RegisterCrossBindingAdaptor(new IAsyncStateMachineAdapter());
         }
         /// <summary>
         /// 注册跨域继承的特殊适配器

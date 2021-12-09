@@ -4,7 +4,7 @@ namespace HotFix
 
     public class Init
     {
-        public static void HotFixInit()
+        public static async void HotFixInit()
         {
             Debug.Log("Enter HotFix Succeeded !");
         }

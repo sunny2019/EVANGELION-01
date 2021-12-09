@@ -33,10 +33,20 @@ namespace Mode
                     throw new ArgumentOutOfRangeException();
             }
 
-            await ModeAddressables.HotUpdate();
             await ModeILRuntime.Init();
-
+            ModeILRuntime.Appdomain.Invoke("HotFix.Init", "HotFixInit", null, null);
+            
             Destroy(gameObject);
         }
+
+        /// <summary>
+        /// 在运行过程中进行资源更新
+        /// </summary>
+        public static async void HotUpdate()
+        {
+            await ModeAddressables.HotUpdate(false);
+            // TODO: 如果HotFixDll也更新了就需要重启应用程序
+        }
     }
+    
 }

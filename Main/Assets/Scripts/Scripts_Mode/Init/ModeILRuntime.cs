@@ -35,9 +35,8 @@ namespace Mode
             {
                 Debug.LogError("Failed to load assembly, Please make sure you have compiled and copied the HotFix DLL");
             }
-
+            
             ILRuntime.Moudle.InitializeILRuntime.InitializeCustom(Appdomain);
-            OnHotFixLoaded();
         }
 
         protected override void Destroy()
@@ -48,13 +47,8 @@ namespace Mode
                 pdbMs.Close();
             dllMs = null;
             pdbMs = null;
-
+            
             base.Destroy();
-        }
-
-        private static void OnHotFixLoaded()
-        {
-            Appdomain.Invoke("HotFix.Init", "HotFixInit", null, null);
         }
     }
 }

@@ -17,14 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: ad53eb1def29a1d4490c421af5abf334
   m_SerializeEntries:
-  - m_GUID: b4c4101ff4ba16b499a24be519c209ec
-    m_Address: HotFixPdb
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 72b1ecf11b87e0640820c2e373401b93
-    m_Address: HotFixDll
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 19ba41d7c0026c3459d37c2fe90c55a0
     m_Address: UniversalRP-HighQuality
     m_ReadOnly: 0
@@ -35,6 +27,14 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: d847b876476d3d6468f5dfcd34266f96
     m_Address: UniversalRP-MediumQuality
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b4c4101ff4ba16b499a24be519c209ec
+    m_Address: HotFixPdb
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 72b1ecf11b87e0640820c2e373401b93
+    m_Address: HotFixDll
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

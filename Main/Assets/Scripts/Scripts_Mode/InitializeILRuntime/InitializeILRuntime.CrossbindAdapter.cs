@@ -18,6 +18,7 @@ namespace ILRuntime.Moudle
         /// </summary>
         private static List<Type> list_GenerateCrossbindAdapterTypes = new List<Type>()
         {
+            typeof(System.Runtime.CompilerServices.IAsyncStateMachine),
         };
 #endif
         /// <summary>

@@ -17,14 +17,14 @@ namespace Mode
         public static async UniTask HotUpdate(bool isInit = true)
         {
             List<object> keys = await CheckUpdate(isInit);
+            Debug.Log("All Keys Count="+keys.Count);
             long sumSize = await GetDownloadSize(keys);
+            Debug.Log("Download Sum Size="+sumSize);
             if (sumSize > 0)
             {
-                long downloaded = 0;
                 await Download(keys, (l =>
                 {
-                    downloaded += l;
-                    Debug.Log(downloaded + "/" + sumSize);
+                    Debug.Log(l + "/" + sumSize);
                 }));
             }
         }
@@ -36,7 +36,7 @@ namespace Mode
         /// </summary>
         /// <param name="isInit">是否初始化Addressables</param>
         /// <returns>Catalogs配置内容</returns>
-        public async static UniTask<List<object>> CheckUpdate(bool isInit = true)
+        public static async UniTask<List<object>> CheckUpdate(bool isInit = true)
         {
             if (isInit)
             {
@@ -57,7 +57,7 @@ namespace Mode
         /// 检查Catalogs，获取最新的IResourceLocator集合
         /// </summary>
         /// <returns></returns>
-        private async static UniTask<IEnumerable<IResourceLocator>> CheckAndUpdateCataLogs()
+        private static async UniTask<IEnumerable<IResourceLocator>> CheckAndUpdateCataLogs()
         {
             IEnumerable<IResourceLocator> locators = Addressables.ResourceLocators;
             AsyncOperationHandle<List<string>> checkCatalogs = Addressables.CheckForCatalogUpdates();
@@ -81,7 +81,7 @@ namespace Mode
         /// </summary>
         /// <param name="keys"></param>
         /// <returns></returns>
-        private async static UniTask<long> GetDownloadSize(IEnumerable<object> keys)
+        private static async UniTask<long> GetDownloadSize(IEnumerable<object> keys)
         {
             var downloadSize = Addressables.GetDownloadSizeAsync(keys);
             await downloadSize.Task;
@@ -90,20 +90,26 @@ namespace Mode
 
         /// <summary>
         /// 通过键集合下载依赖的Bundle
-        /// </summary>
+        /// </summary>  
         /// <param name="keys"></param>
         /// <param name="downloadedSize"></param>
-        private async static UniTask Download(IEnumerable<object> keys, Action<long> downloadedSize = null)
+        private static async UniTask Download(IEnumerable<object> keys, Action<long> downloadedSize = null)
         {
+            long allDownloadedSize = 0;
             foreach (var key in keys)
             {
+                //TODO: 此处检查大小获取是否需要下载，keys过多消耗可能比较大。直接使用Keys调用DownloadDependenciesAsync进行下载虽然可以节省此部分性能，但是会导致无法在运行过程中进行热更。
                 var keySize = Addressables.GetDownloadSizeAsync(key);
                 await keySize.Task;
                 if (keySize.Result > 0)
                 {
                     var downloadDependencies = Addressables.DownloadDependenciesAsync(key);
-                    await downloadDependencies.Task;
-                    downloadedSize?.Invoke(keySize.Result);
+                    while (!downloadDependencies.IsDone)
+                    {
+                        downloadedSize?.Invoke(allDownloadedSize+downloadDependencies.GetDownloadStatus().DownloadedBytes);
+                        await UniTask.WaitForEndOfFrame();
+                    }
+                    allDownloadedSize += downloadDependencies.GetDownloadStatus().TotalBytes;
                 }
             }
         }
