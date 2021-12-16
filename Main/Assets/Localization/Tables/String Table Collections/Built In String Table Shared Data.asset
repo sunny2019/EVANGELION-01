@@ -14,7 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: Built In String Table
   m_TableCollectionNameGuidString: 8400728822a664842a901259154239a9
-  m_Entries: []
+  m_Entries:
+  - m_Id: 5757999900196864
+    m_Key: hotupdate_Init
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5758064123379712
+    m_Key: hotupdate_Confim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5763831874387968
+    m_Key: hotupdate_Cancle
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -26,7 +26,7 @@ namespace Mode
                     await ModeAddressables.HotUpdate();
                     break;
                 case AAMode.PlayingDownload:
-                    await ModeAddressables.CheckUpdate();
+                    await ModeAddressables. CheckAndUpdateCataLogs();
                     break;
                 default:
                     Addressables.LogError("当前AAMode:" + mAAMode + ",未进行对应模式初始化");
