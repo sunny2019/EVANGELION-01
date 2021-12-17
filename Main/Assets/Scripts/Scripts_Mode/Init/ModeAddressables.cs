@@ -46,12 +46,14 @@ namespace Mode
             long sumSize = downloadSize.Result;
 
             hotUpdateUI.HideTip();
-            
+
             Debug.Log("Download Sum Size=" + sumSize);
             if (sumSize > 0)
             {
                 //Download:通过键集合下载依赖的Bundle
                 long allDownloadedSize = 0;
+                hotUpdateUI.ShowProgress(allDownloadedSize, sumSize);
+                    
                 foreach (var key in keys)
                 {
                     //TODO: 此处检查大小获取是否需要下载，keys过多消耗可能比较大。直接使用Keys调用DownloadDependenciesAsync进行下载虽然可以节省此部分性能，但是会导致无法在运行过程中进行热更。
@@ -62,15 +64,15 @@ namespace Mode
                         var downloadDependencies = Addressables.DownloadDependenciesAsync(key);
                         while (!downloadDependencies.IsDone)
                         {
-                            Debug.Log((allDownloadedSize + downloadDependencies.GetDownloadStatus().DownloadedBytes) + "/" + sumSize);
-                            hotUpdateUI.ShowProgress(((allDownloadedSize + downloadDependencies.GetDownloadStatus().DownloadedBytes)/1024f/1024f)+"MB/"+sumSize/1024f/1024f+"MB",
-                                (allDownloadedSize + downloadDependencies.GetDownloadStatus().DownloadedBytes)/sumSize);
+                            hotUpdateUI.ShowProgress(allDownloadedSize + downloadDependencies.GetDownloadStatus().DownloadedBytes, sumSize);
                             await UniTask.WaitForEndOfFrame();
                         }
 
                         allDownloadedSize += downloadDependencies.GetDownloadStatus().TotalBytes;
+                        hotUpdateUI.ShowProgress(allDownloadedSize, sumSize);
                     }
                 }
+
                 hotUpdateUI.HideProgress();
             }
 
@@ -78,6 +80,7 @@ namespace Mode
                 Object.Destroy(hotUpdateUI.gameObject);
         }
 
+       
 
         /// <summary>
         /// 检查Catalogs，获取最新的IResourceLocator集合

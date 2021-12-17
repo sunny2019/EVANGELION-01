@@ -53,11 +53,19 @@ namespace Mode
             _modalWindow.gameObject.SetActive(false);
         }
 
-        public void ShowProgress(string progressTitle, float progress)
+        public void ShowProgress(long cur, long all)
         {
             _progressBar.gameObject.SetActive(true);
-            _progressBarTitle.GetComponent<TMP_Text>().text = progressTitle;
-            _progressBarProgress.GetComponent<Image>().DOFillAmount(progress, 0.2f);
+            _progressBarTitle.GetComponent<TMP_Text>().text = FileSizeCovert.BytesToMb(cur) + "MB/" + FileSizeCovert.BytesToMb(all) + "MB";
+            _progressBarProgress.GetComponent<Image>().fillAmount = cur / (float) all;
+            LogCurrentProgress(cur, all);
+        }
+        
+        private static void LogCurrentProgress(long cur, long all)
+        {
+            Debug.Log(cur + "/" + all
+                      + "\t" + FileSizeCovert.BytesToMb(cur) + "MB/" + FileSizeCovert.BytesToMb(all) + "MB"
+                      + "\t" + cur / (float) all);
         }
 
         public void HideProgress()
