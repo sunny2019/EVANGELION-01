@@ -68,8 +68,10 @@ namespace Mode
                             await UniTask.WaitForEndOfFrame();
                         }
 
+                        //Debug.Log(key+"\t"+downloadDependencies.GetDownloadStatus().TotalBytes);
                         allDownloadedSize += downloadDependencies.GetDownloadStatus().TotalBytes;
                         hotUpdateUI.ShowProgress(allDownloadedSize, sumSize);
+                        Addressables.Release(downloadDependencies);
                     }
                 }
 
