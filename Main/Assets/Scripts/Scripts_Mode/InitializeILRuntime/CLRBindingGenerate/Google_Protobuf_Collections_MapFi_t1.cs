@@ -40,11 +40,11 @@ namespace ILRuntime.Runtime.Generated
             System.UInt32 @mapTag = (uint)ptr_of_this_method->Value;
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            Google.Protobuf.FieldCodec<System.Int32> @valueCodec = (Google.Protobuf.FieldCodec<System.Int32>)typeof(Google.Protobuf.FieldCodec<System.Int32>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            Google.Protobuf.FieldCodec<System.Int32> @valueCodec = (Google.Protobuf.FieldCodec<System.Int32>)typeof(Google.Protobuf.FieldCodec<System.Int32>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
             __intp.Free(ptr_of_this_method);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
-            Google.Protobuf.FieldCodec<System.String> @keyCodec = (Google.Protobuf.FieldCodec<System.String>)typeof(Google.Protobuf.FieldCodec<System.String>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            Google.Protobuf.FieldCodec<System.String> @keyCodec = (Google.Protobuf.FieldCodec<System.String>)typeof(Google.Protobuf.FieldCodec<System.String>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
             __intp.Free(ptr_of_this_method);
 
 

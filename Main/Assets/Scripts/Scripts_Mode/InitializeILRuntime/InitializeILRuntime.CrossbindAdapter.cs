@@ -1,6 +1,3 @@
-using Google.Protobuf;
-using UnityEngine;
-
 namespace ILRuntime.Moudle
 {
     using System;

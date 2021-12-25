@@ -7,7 +7,7 @@ namespace Mode
     [DisallowMultipleComponent]
     public class Init : MonoBehaviour
     {
-        public enum AAMode
+        public  enum AAMode
         {
             PreDownload,
             PlayingDownload,

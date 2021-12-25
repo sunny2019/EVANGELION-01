@@ -18,7 +18,7 @@ namespace Mode
         public static async UniTask HotUpdate(bool isInit = true)
         {
             if (hotUpdateUI == null)
-                hotUpdateUI = Object.Instantiate(Resources.Load<GameObject>("Synchronize/Prefab/HotUpdate_Canvas")).GetComponent<HotUpdate_Canvas>();
+                hotUpdateUI=  (await Addressables.InstantiateAsync("Assets/Prefab/Synchronize/Prefab/HotUpdate_Canvas.prefab").Task).GetComponent<HotUpdate_Canvas>();
             hotUpdateUI.ResetUI();
 
             //CheckUpdate

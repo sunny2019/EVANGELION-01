@@ -1,0 +1,329 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: URPAssets
+  m_EditorClassIdentifier: 
+  m_GroupName: URPAssets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 5bcd908ae48bb3a45b1b5aa231ce2640
+  m_SerializeEntries:
+  - m_GUID: 19ba41d7c0026c3459d37c2fe90c55a0
+    m_Address: UniversalRP-HighQuality
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4a8e21d5c33334b11b34a596161b9360
+    m_Address: Assets/ConfigMoudle/UniversalRPSettings/UniversalRenderer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7b3ede40266cd49a395def176e1bc486
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/ObjectMotionVectors.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c17132b1f77d20942aa75f8429c0f8bc
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/Blit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 60e1133243b97e347b653163a8c01b64
+    m_Address: Packages/com.unity.render-pipelines.universal/Runtime/Data/XRSystemData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 41439944d30ece34e96484bdb6645b55
+    m_Address: Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0f854b35a0cf61a429bd5dcfea30eddd
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/ScreenSpaceShadows.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e9155b26e1bc55942a41e518703fe304
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/StencilDeferred.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cf852408f2e174538bcd9b7fda1c5ae7
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Debug/DebugReplacement.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 04c410c9937594faa893a11dceb85f7e
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/Sampling.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 93446b5c5339d4f00b85c159e1159b7c
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e6e9a19c3678ded42a3bc431ebef7dbd
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d104b2fc1ca6445babb8e90b0758136b
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlitColorAndDepth.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c56b7e0d4c7cb484e959caeeedae9bbf
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/CameraMotionVectors.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d6dae50ee9e1bfa4db75f19f99355220
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/CopyDepth.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5fd9a8feb75a4b5894c241777f519d4e
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/MaterialError.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f0b67500f7fad3b4c9f2b13e8f41ba6e
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 179f794063d2a66478e6e726f84a65bc
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_31.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 65df88701913c224d95fc554db28381a
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LutBuilderLdr.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b4db8180660810945bf8d55ab44352ad
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ff47e5a0f105eb34883b973e51f4db62
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_28.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d5a307c014552314b9f560906d708772
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/XR/XRMirrorView.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dd77ffd079630404e879388999033049
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 14381521ff11cb74abe3fe65401c23be
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_17.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1edcd131364091c46a17cbff0b1de97a
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/CameraMotionBlur.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4431b1f1f743fbf4eb310a967890cbea
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/XR/XROcclusionMesh.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fc3fa8f108657e14486697c9a84ccfc5
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4dcc0502f8586f941b5c4a66717205e8
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_15.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c9bd74624d8070f429e3f46d161f9204
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_20.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d4044ea2490d63b43aa1765f8efbf8a9
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_19.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 10b6c6d22e73dea46a8ab36b6eebd629
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_23.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 81200413a40918d4d8702e94db29911c
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 896d9004736809c4fb5973b7c12eb8b9
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_30.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 39451254daebd6d40b52899c1f1c0c1b
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_6.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d5c9b274310e5524ebe32a4e4da3df1f
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_21.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9930fb4528622b34687b00bbe6883de7
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bd9e8c758250ef449a4b4bfaad7a2133
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f69770e54f2823f43badf77916acad83
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_22.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d36f0fe53425e08499a2333cf423634c
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_18.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c94ad916058dff743b0f1c969ddbe660
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_7.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5e7134d6e63e0bc47a1dd2669cedb379
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/GaussianDepthOfField.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d50c5e07c9911a74982bddf7f3075e7b
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9d92991794bb5864c8085468b97aa067
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_16.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 510a2f57334933e4a8dbabe4c30204e4
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d18a24d7b4ed50f4387993566d9d3ae2
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_26.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 47a45908f6db0cb44a0d5e961143afec
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_14.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bfed3e498947fcb4890b7f40f54d85b9
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_12.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ec9fec698a3456d4fb18cf8bacb7a2bc
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LutBuilderHdr.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1c3c6d69a645b804fa232004b96b7ad3
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_25.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d1f1048909d55cd4fa1126ab998f617e
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/SMAA/AreaTex.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2ca97df9d1801e84a8a8f2c53cb744f0
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5cdee82a77d13994f83b8fdabed7c301
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Large02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6cda457ac28612740adb23da5d39ea92
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LensFlareDataDriven.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1134690bf9216164dbc75050e35b7900
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fd2fd78b392986e42a12df2177d3b89c
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Large01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fa042edbfc40fbd4bad0ab9d505b1223
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_29.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 51eee22c2a633ef4aada830eed57c3fd
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/SMAA/SearchTex.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 96aaab9cc247d0b4c98132159688c1af
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e7857e9d0c934dc4f83f270f8447b006
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/UberPost.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5f1864addb451f54bae8c86d230f736e
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/Bloom.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2aed67ad60045d54ba3a00c91e2d2631
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/BokehDepthOfField.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c989e1ed85cf7154caa922fec53e6af6
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_27.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c49e63ed1bbcb334780a3bd19dfed403
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/FinalPost.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1097e90e1306e26439701489f391a6c0
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 63eaba0ebfb82cc43bde059b4a8c65f6
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/SubpixelMorphologicalAntialiasing.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1121bb4e615ca3c48b214e79e841e823
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/StopNaN.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ed5ea7ce59ca8ec4f9f14bf470a30f35
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_8.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d512512f4af60a442ab3458489412954
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_13.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 654c582f7f8a5a14dbd7d119cbde215d
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 071e954febf155243a6c81e48f452644
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_9.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7ce2118f74614a94aa8a0cdf2e6062c3
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e63eef8f54aa9dc4da9a5ac094b503b5
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_5.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a2ec5cbf5a9b64345ad3fab0912ddf7b
+    m_Address: Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_24.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a15b78cf8ca26ca4fb2090293153c62c
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/PaniniProjection.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d847b876476d3d6468f5dfcd34266f96
+    m_Address: UniversalRP-MediumQuality
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a31e9f9f9c9d4b9429ed0d1234e22103
+    m_Address: UniversalRP-LowQuality
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7b6a435bf42309a4c9c1156b8e9b4a03, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b2c5b4718f69295429de85f0ecfa77ab, type: 2}
+    - {fileID: 11400000, guid: eba4d82829ce7c447826c967922127af, type: 2}

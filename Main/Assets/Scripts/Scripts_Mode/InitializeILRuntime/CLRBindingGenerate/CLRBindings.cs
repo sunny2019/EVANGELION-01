@@ -51,9 +51,6 @@ namespace ILRuntime.Runtime.Generated
             System_Reflection_MethodBase_Binding.Register(app);
             UnityEngine_Debug_Binding.Register(app);
             System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Binding.Register(app);
-            UnityEngine_AddressableAssets_Addressables_Binding.Register(app);
-            Cysharp_Threading_Tasks_AddressablesAsyncExtensions_Binding.Register(app);
-            Cysharp_Threading_Tasks_UniTask_1_SceneInstance_Binding_Awaiter_Binding.Register(app);
         }
 
         /// <summary>

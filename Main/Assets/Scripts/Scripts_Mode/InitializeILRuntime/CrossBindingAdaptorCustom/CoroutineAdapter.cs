@@ -1,4 +1,6 @@
 ﻿
+using UnityEngine;
+
 namespace ILRuntime.Moudle.CrossBindingAdaptorCustom
 {
     using System;

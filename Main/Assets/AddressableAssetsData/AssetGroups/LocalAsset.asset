@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: LocalAsset
+  m_EditorClassIdentifier: 
+  m_GroupName: LocalAsset
+  m_Data:
+    m_SerializedData: []
+  m_GUID: edf2624c7e191714eb2c8814123d55f0
+  m_SerializeEntries:
+  - m_GUID: e06452b90ee7a904a9ff35c13d51c50b
+    m_Address: Assets/Prefab/Synchronize/Prefab/HotUpdate_Canvas.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ecc671aad5715df4e80950b98c6ef5fe
+    m_Address: Assets/Prefab/Synchronize/Sprite/sp_ProgressBar.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7b6a435bf42309a4c9c1156b8e9b4a03, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 541fc930083cbc941936b005f73eb1e2, type: 2}
+    - {fileID: 11400000, guid: 2df70f791b92f0c4f9c5449fb6826f0d, type: 2}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ILRuntime_ContentUpdateGroupSchema
   m_EditorClassIdentifier: 
   m_Group: {fileID: 11400000, guid: d1015b3cd802d184fb94cf8f572962cb, type: 2}
-  m_StaticContent: 1
+  m_StaticContent: 0

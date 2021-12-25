@@ -7,8 +7,6 @@ namespace ILRuntime.Moudle.CrossbindAdapter
 {   
     public class IAsyncStateMachineAdapter : CrossBindingAdaptor
     {
-        static CrossBindingMethodInfo mMoveNext_0 = new CrossBindingMethodInfo("MoveNext");
-        static CrossBindingMethodInfo<System.Runtime.CompilerServices.IAsyncStateMachine> mSetStateMachine_1 = new CrossBindingMethodInfo<System.Runtime.CompilerServices.IAsyncStateMachine>("SetStateMachine");
         public override Type BaseCLRType
         {
             get
@@ -32,6 +30,10 @@ namespace ILRuntime.Moudle.CrossbindAdapter
 
         public class Adapter : System.Runtime.CompilerServices.IAsyncStateMachine, CrossBindingAdaptorType
         {
+            CrossBindingMethodInfo mMoveNext_0 = new CrossBindingMethodInfo("MoveNext");
+            CrossBindingMethodInfo<System.Runtime.CompilerServices.IAsyncStateMachine> mSetStateMachine_1 = new CrossBindingMethodInfo<System.Runtime.CompilerServices.IAsyncStateMachine>("SetStateMachine");
+
+            bool isInvokingToString;
             ILTypeInstance instance;
             ILRuntime.Runtime.Enviorment.AppDomain appdomain;
 
@@ -64,7 +66,15 @@ namespace ILRuntime.Moudle.CrossbindAdapter
                 m = instance.Type.GetVirtualMethod(m);
                 if (m == null || m is ILMethod)
                 {
-                    return instance.ToString();
+                    if (!isInvokingToString)
+                    {
+                        isInvokingToString = true;
+                        string res = instance.ToString();
+                        isInvokingToString = false;
+                        return res;
+                    }
+                    else
+                        return instance.Type.FullName;
                 }
                 else
                     return instance.Type.FullName;
